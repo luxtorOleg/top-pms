@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { NavbarService } from './navbar.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
@@ -14,7 +15,8 @@ import { NavbarService } from './navbar.service';
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
