@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { NavbarService } from './navbar.service';
 import { RegistrationComponent } from './registration/registration.component';
+import { LoginService } from './login.service';
 
 
 
@@ -23,7 +24,7 @@ import { RegistrationComponent } from './registration/registration.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [NavbarService],
+  providers: [NavbarService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
