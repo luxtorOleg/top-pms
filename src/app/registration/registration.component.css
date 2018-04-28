@@ -133,3 +133,11 @@ input::placeholder{
   border-bottom: 1px solid #ccc;
   max-width: 290px;
 }
+
+.forget button{
+  margin-top: 50px;
+  border-radius: 0;
+  color: #aaa;
+  margin-left: 50px;
+  font-weight: 700;
+}
