@@ -16,14 +16,17 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
   }
   onSubmit(form: NgForm) {
-    const userModel = {
-      login: form.value.login,
-      pass: form.value.pass,
-      name: form.value.name,
-      surname: form.value.surname
-    };
-    this.loginService.setUserModel(userModel);
-    this.router.navigate(['/login']);
+    if (form.value.login !== '' && form.value.pass !== '') {
+      const userModel = {
+        login: form.value.login,
+        pass: form.value.pass,
+        name: form.value.name,
+        surname: form.value.surname
+      };
+      this.loginService.setUserModel(userModel);
+      console.log(form.value);
+      this.router.navigate(['/login']);
+    }
   }
 
 }
