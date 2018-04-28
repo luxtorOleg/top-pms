@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   onSubmit(form: NgForm) {
     if (form.value.login !== '' && form.value.pass !== '') {
       this.navbarService.setUserModel(this.userModel);
-      this.router.navigate(['/navbar']);
+      this.router.navigate(['/projects']);
     }
   }
 }
