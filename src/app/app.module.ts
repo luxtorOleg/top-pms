@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { NavbarService } from './navbar.service';
 import { RegistrationComponent } from './registration/registration.component';
-import { LoginService } from './login.service';
 import { ProjectsComponent } from './projects/projects.component';
 
 
@@ -26,7 +25,7 @@ import { ProjectsComponent } from './projects/projects.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [NavbarService, LoginService],
+  providers: [NavbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

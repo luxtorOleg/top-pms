@@ -3,7 +3,6 @@ import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 
 import {NavbarService} from '../navbar.service';
-import {LoginService} from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -15,11 +14,8 @@ export class LoginComponent implements OnInit {
     login: '',
     pass: '',
   };
-  constructor(public loginService: LoginService, public navbarService: NavbarService, private router: Router) { }
+  constructor( public navbarService: NavbarService, private router: Router) { }
   ngOnInit() {
-    if (this.loginService) {
-      this.userModel = this.loginService.getUserModel();
-    }
   }
   onSubmit(form: NgForm) {
     if (form.value.login !== '' && form.value.pass !== '') {
