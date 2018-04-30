@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 
-import {NavbarService} from '../navbar.service';
+import {UserService} from './user.service';
 
 @Component({
   selector: 'app-login',
@@ -14,14 +14,14 @@ export class LoginComponent implements OnInit {
     login: '',
     pass: '',
   };
-  constructor( public navbarService: NavbarService, private router: Router) { }
+  constructor( private userService: UserService, private router: Router) { }
   ngOnInit() {
   }
   onSubmit(form: NgForm) {
-    this.router.navigate(['/projects', form.value.login]);
+    if (form.value.login && form.value.pass) {
+      this.userService.setUserModel(this.userModel);
+      this.router.navigate(['/projects']);
+   }
   }
 }
-// if (form.value.login !== '' && form.value.pass !== '') {
-// this.navbarService.setUserModel(this.userModel);
-// this.router.navigate(['/projects']);
-// }
+

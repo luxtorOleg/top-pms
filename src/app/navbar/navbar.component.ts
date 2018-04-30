@@ -1,6 +1,6 @@
 import { Component, OnInit , Input } from '@angular/core';
 
-import {NavbarService} from '../navbar.service';
+import {UserService} from '../login/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,18 +8,16 @@ import {NavbarService} from '../navbar.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  // userModel;
-  // constructor(public navbarService: NavbarService) {
-  //   this.userModel = {
-  //       login: '',
-  //       pass: ''
-  //   };
-  // }
-  @Input() username: String = '';
-  constructor() {}
+  userModel;
+  constructor(public userService: UserService) {
+    this.userModel = {
+        login: null,
+        pass: null
+    };
+  }
   ngOnInit() {
-    // this.userModel = this.navbarService.getUserModel();
-    // console.log(this.navbarService.getUserModel());
+    this.userModel = this.userService.getUserModel();
+    console.log(this.userService.getUserModel());
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-projects',
@@ -8,12 +8,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute) { }
-  username: String = '';
+  constructor() { }
   ngOnInit() {
-    this.router.params.subscribe(params =>
-    this.username = params['username']);
-
   }
 
 }

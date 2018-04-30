@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class NavbarService {
+export class UserService {
   private userModel = {
-    login: '',
-    pass: ''
+    login: null,
+    pass: null
   };
   constructor() {}
   setUserModel(userModel): void {

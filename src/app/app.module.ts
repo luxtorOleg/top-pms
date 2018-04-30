@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { NavbarService } from './navbar.service';
+import { UserService } from './login/user.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProjectsComponent } from './projects/projects.component';
 
@@ -25,7 +25,7 @@ import { ProjectsComponent } from './projects/projects.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [NavbarService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
