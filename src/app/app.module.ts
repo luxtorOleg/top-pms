@@ -9,6 +9,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { UserService } from './login/user.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 
 
@@ -18,7 +19,8 @@ import { ProjectsComponent } from './projects/projects.component';
     NavbarComponent,
     LoginComponent,
     RegistrationComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,

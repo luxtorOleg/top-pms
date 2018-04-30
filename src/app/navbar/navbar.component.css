@@ -2,3 +2,11 @@
   color: white;
   padding-right: 35px;
 }
+.active {
+  color: black !important;
+  background: white;
+  border-radius: 97px 97px 97px 97px;
+  -moz-border-radius: 97px 97px 97px 97px;
+  -webkit-border-radius: 97px 97px 97px 97px;
+  border: 0px solid #000000;
+}
