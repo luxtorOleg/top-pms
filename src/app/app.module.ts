@@ -10,6 +10,7 @@ import { UserService } from './login/user.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TasksComponent } from './tasks/tasks.component';
+import {ProjectsService} from './projects/projects.service';
 
 
 
@@ -27,7 +28,10 @@ import { TasksComponent } from './tasks/tasks.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [
+    UserService,
+    ProjectsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

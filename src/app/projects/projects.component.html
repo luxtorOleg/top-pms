@@ -2,4 +2,11 @@
 <div class="container">
   <h1>Projects</h1>
   <p class="lead">All ptojects</p>
+  <div class="container">
+    <div class="row" *ngFor="let projects of projectsService.projects">
+      <div class="col">{{projects.name}}</div>
+      <div class="col">{{projects.owner}}</div>
+      <div class="col">{{projects.type}}</div>
+    </div>
+  </div>
 </div>
