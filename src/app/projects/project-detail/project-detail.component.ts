@@ -11,13 +11,13 @@ import { Project } from '../../common/protocols';
 })
 export class ProjectDetailComponent implements OnInit {
   project: Project = null;
-  constructor(public projectService: ProjectsService, public router: ActivatedRoute) { }
+  constructor(private projectService: ProjectsService, private router: ActivatedRoute) { }
 
   ngOnInit() {
-      this.router.params.subscribe(params => this.project = this.getProjectDetailValueById( Number(params['id'])));
+      this.router.params.subscribe(params => this.project = this.getProjectById( params['id']));
   }
 
-  getProjectDetailValueById(id: number): Project {
+  getProjectById(id: number): Project {
     return this.projectService.getProjectById(id);
   }
 
