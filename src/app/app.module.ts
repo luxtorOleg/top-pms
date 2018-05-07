@@ -11,6 +11,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TasksComponent } from './tasks/tasks.component';
 import {ProjectsService} from './projects/projects.service';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 
 
 
@@ -21,7 +22,8 @@ import {ProjectsService} from './projects/projects.service';
     LoginComponent,
     RegistrationComponent,
     ProjectsComponent,
-    TasksComponent
+    TasksComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

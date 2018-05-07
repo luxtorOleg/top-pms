@@ -3,10 +3,11 @@
   <h1>Projects</h1>
   <p class="lead">All ptojects</p>
   <div class="container">
-    <div class="row" *ngFor="let projects of projectsService.projects">
-      <div class="col">{{projects.name}}</div>
-      <div class="col">{{projects.owner}}</div>
-      <div class="col">{{projects.type}}</div>
+    <div class="row" *ngFor="let project of projectsService.projects">
+      <div class="col">{{project.name}}</div>
+      <div class="col">{{project.owner}}</div>
+      <div class="col">{{project.type}}</div>
+      <span [routerLink]="getProjectDetailsURL(project)">Details</span>
     </div>
   </div>
 </div>
