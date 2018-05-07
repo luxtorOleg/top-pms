@@ -1,24 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 import { ProjectsService} from '../projects.service';
 import { Project } from '../../common/protocols';
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-project-detail',
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.css']
 })
-export class ProjectDetailComponent implements OnInit {
-  project: Project = null;
+export class ProjectDetailComponent implements OnInit, OnDestroy {
+  private project: Project = null;
+  paramSubscription: Subscription;
+
   constructor(private projectService: ProjectsService, private router: ActivatedRoute) { }
 
   ngOnInit() {
-      this.router.params.subscribe(params => this.project = this.getProjectById( params['id']));
+      this.paramSubscription = this.router.params.subscribe(params => this.project = this.getProjectById( params['id']));
   }
 
-  getProjectById(id: number): Project {
+  getProjectById(id: string): Project {
     return this.projectService.getProjectById(id);
+  }
+
+  ngOnDestroy() {
+    this.paramSubscription.unsubscribe();
   }
 
 }
