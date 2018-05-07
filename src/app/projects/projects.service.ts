@@ -28,11 +28,6 @@ export class ProjectsService {
     }
   ];
   getProjectById(id: number): Project {
-    for (let i = 0; i < this.projects.length; i++) {
-      if (this.projects[i].id === id) {
-        return this.projects[i];
-      }
-    }
-     // console.log(this.projects.find(project => project.id === id));
+     return this.projects.find(project => project.id === id);
   }
 }
