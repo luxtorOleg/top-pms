@@ -28,12 +28,15 @@ export class ProjectsService {
     }
   ];
   getProjectById(id: string): Project {
-     return this.projects.find(project => project.id === id);
+    return this.projects.find(project => project.id === id);
   }
   deleteProject(index: number) {
     this.projects.splice(index, 1);
   }
   createProject(project: Project) {
-      this.projects.push(project);
+    this.projects.push(project);
+  }
+  updateProject(index: number, project: Project) {
+    this.projects[index] = project;
   }
 }

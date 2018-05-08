@@ -9,7 +9,8 @@
       <div class="col">{{project.owner}}</div>
       <div class="col">{{project.type}}</div>
       <button class="btn-success" [routerLink]="getProjectDetailsURL(project)">Details</button>
-      <button class="btn-warning" (click)="deleteProject(project.id)">Delete</button>
+      <button class="btn-warning" [routerLink]="getProjectUpdateURL(project)">Update</button>
+      <button class="btn-danger" (click)="deleteProject(project.id)">Delete</button>
     </div>
   </div>
 </div>
