@@ -11,7 +11,7 @@ import {Subscription} from 'rxjs/Subscription';
   styleUrls: ['./project-detail.component.css']
 })
 export class ProjectDetailComponent implements OnInit, OnDestroy {
-  private project: Project = null;
+  public project: Project = null;
   paramSubscription: Subscription;
 
   constructor(private projectService: ProjectsService, private router: ActivatedRoute) { }
