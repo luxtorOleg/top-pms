@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectsService} from './projects.service';
 import {Project} from '../common/protocols';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -8,11 +9,14 @@ import {Project} from '../common/protocols';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-
-  constructor(public projectsService: ProjectsService) { }
+  constructor(public projectsService: ProjectsService, public router: Router) { }
   ngOnInit() {
   }
   getProjectDetailsURL(project: Project) {
     return ['/projects/' + project.id];
+  }
+  deleteProject(id: string) {
+    const project: Project = this.projectsService.projects.find(p => p.id === id);
+    this.projectsService.deleteProject(this.projectsService.projects.indexOf(project));
   }
 }

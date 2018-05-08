@@ -8,6 +8,7 @@
       <div class="col">{{project.owner}}</div>
       <div class="col">{{project.type}}</div>
       <span [routerLink]="getProjectDetailsURL(project)">Details</span>
+      <button class="delete" (click)="deleteProject(project.id)">Delete</button>
     </div>
   </div>
 </div>
