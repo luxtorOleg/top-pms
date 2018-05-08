@@ -19,4 +19,7 @@ export class ProjectsComponent implements OnInit {
     const project: Project = this.projectsService.projects.find(p => p.id === id);
     this.projectsService.deleteProject(this.projectsService.projects.indexOf(project));
   }
+  createProject() {
+    this.router.navigate(['./create']);
+  }
 }

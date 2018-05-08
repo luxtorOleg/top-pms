@@ -33,4 +33,7 @@ export class ProjectsService {
   deleteProject(index: number) {
     this.projects.splice(index, 1);
   }
+  createProject(project: Project) {
+      this.projects.push(project);
+  }
 }

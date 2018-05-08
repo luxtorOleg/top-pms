@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TasksComponent } from './tasks/tasks.component';
 import {ProjectsService} from './projects/projects.service';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
+import { ProjectCreateComponent } from './projects/project-create/project-create.component';
 
 
 
@@ -23,7 +24,8 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     RegistrationComponent,
     ProjectsComponent,
     TasksComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    ProjectCreateComponent
   ],
   imports: [
     BrowserModule,
