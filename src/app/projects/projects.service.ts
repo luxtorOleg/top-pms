@@ -30,8 +30,9 @@ export class ProjectsService {
   getProjectById(id: string): Project {
     return this.projects.find(project => project.id === id);
   }
-  deleteProject(index: number) {
-    this.projects.splice(index, 1);
+  deleteProject(project: Project) {
+   const projectIndex = this.projects.indexOf(project);
+    this.projects.splice(projectIndex, 1);
   }
   createProject(project: Project) {
     this.projects.push(project);

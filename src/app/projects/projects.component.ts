@@ -18,9 +18,8 @@ export class ProjectsComponent implements OnInit {
   getProjectUpdateURL(project: Project) {
     return ['/projects/update/' + project.id];
   }
-  deleteProject(id: string) {
-    const project: Project = this.projectsService.projects.find(p => p.id === id);
-    this.projectsService.deleteProject(this.projectsService.projects.indexOf(project));
+  deleteProject(project: Project) {
+    this.projectsService.deleteProject(project);
   }
   createProject() {
     this.router.navigate(['./create']);

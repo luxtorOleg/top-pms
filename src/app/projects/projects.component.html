@@ -10,7 +10,7 @@
       <div class="col">{{project.type}}</div>
       <button class="btn btn-success " [routerLink]="getProjectDetailsURL(project)">Details</button>
       <button class="btn btn-warning" [routerLink]="getProjectUpdateURL(project)">Update</button>
-      <button class="btn btn-danger" (click)="deleteProject(project.id)">Delete</button>
+      <button class="btn btn-danger" (click)="deleteProject(project)">Delete</button>
     </div>
   </div>
 </div>
