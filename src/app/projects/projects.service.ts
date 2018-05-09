@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Project, Member } from '../common/protocols';
+import { Project, Member, Task } from '../common/protocols';
 
 @Injectable()
 export class ProjectsService {
@@ -10,21 +10,24 @@ export class ProjectsService {
       name: 'VizLocal',
       type: 'web',
       owner: 'Marian BB',
-      members: new Array<Member>()
+      members: new Array<Member>(),
+      taskId: '11'
     },
     {
       id: '1',
       name: 'Elicall',
       type: 'mobile',
       owner: 'Volodia DD',
-      members: new Array<Member>()
+      members: new Array<Member>(),
+      taskId: '12'
     },
     {
       id: '2',
       name: 'Divtricks',
       type: 'web',
       owner: 'Volodia DD',
-      members: new Array<Member>()
+      members: new Array<Member>(),
+      taskId: '14'
     }
   ];
   getProjectById(id: string): Project {
