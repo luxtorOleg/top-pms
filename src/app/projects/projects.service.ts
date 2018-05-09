@@ -37,7 +37,8 @@ export class ProjectsService {
   createProject(project: Project) {
     this.projects.push(project);
   }
-  updateProject(index: number, project: Project) {
+  updateProject( project: Project) {
+    const index = this.projects.indexOf(project);
     this.projects[index] = project;
   }
 }

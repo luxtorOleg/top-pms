@@ -22,9 +22,8 @@ export class ProjectUpdateComponent implements OnInit {
       this.project = this.projectsService.getProjectById(params['id']));
   }
   updateProject(form: NgForm) {
-    const index = this.projectsService.projects.indexOf(this.project);
     this.project = form.value;
-    this.projectsService.updateProject(index, this.project);
+    this.projectsService.updateProject(this.project);
     this.router.navigate(['./projects']);
   }
 }
