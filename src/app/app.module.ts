@@ -14,6 +14,7 @@ import {ProjectsService} from './projects/projects.service';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { ProjectCreateComponent } from './projects/project-create/project-create.component';
 import { ProjectUpdateComponent } from './projects/project-update/project-update.component';
+import { ListItemComponent } from './list-item/list-item.component';
 
 
 
@@ -27,7 +28,8 @@ import { ProjectUpdateComponent } from './projects/project-update/project-update
     TasksComponent,
     ProjectDetailComponent,
     ProjectCreateComponent,
-    ProjectUpdateComponent
+    ProjectUpdateComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
