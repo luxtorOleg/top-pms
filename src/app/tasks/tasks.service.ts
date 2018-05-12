@@ -5,7 +5,7 @@ import { Task } from '../common/protocols';
 export class TasksService {
 
   constructor() { }
-  public projects: Array<Task> = [
+  public tasks: Array<Task> = [
     {
       id: '0',
       name: 'fix',
@@ -22,4 +22,19 @@ export class TasksService {
       type: 'web',
     }
   ];
+
+  getTaskById(id: string): Task {
+    return this.tasks.find(task => task.id === id);
+  }
+  deleteTask(task: Task) {
+    const taskIndex = this.tasks.indexOf(task);
+    this.tasks.splice(taskIndex, 1);
+  }
+  createTask(task: Task) {
+    this.tasks.push(task);
+  }
+  updateTask( task: Task) {
+    const index = this.tasks.indexOf(task);
+    this.tasks[index] = task;
+  }
 }

@@ -2,4 +2,13 @@
 <div class="container">
   <h1>Tasks</h1>
   <p class="lead">All Tasks</p>
+  <button class="btn btn-success" (click)="createTask()">Create</button>
+  <div class="container">
+    <div class="row" *ngFor="let task of tasksService.tasks">
+      <app-list-item [item]="task"
+                     [detailsRouterLink]="getTaskDetailsURL(task)"
+                     [updateRouterLink]="getTaskUpdateURL(task)"
+                     (delete)="deleteTask($event)"></app-list-item>
+    </div>
+  </div>
 </div>
