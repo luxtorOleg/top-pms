@@ -9,6 +9,7 @@ import {TasksComponent} from './tasks/tasks.component';
 import {ProjectDetailComponent} from './projects/project-detail/project-detail.component';
 import {ProjectCreateComponent} from './projects/project-create/project-create.component';
 import {ProjectUpdateComponent} from './projects/project-update/project-update.component';
+import {TaskCreateComponent} from './tasks/task-create/task-create.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'projects/create', component: ProjectCreateComponent},
   { path: 'projects/update/:id', component: ProjectUpdateComponent},
   { path: 'tasks', component: TasksComponent},
+  { path: 'tasks/create', component: TaskCreateComponent}
 
 ];
 

@@ -25,6 +25,6 @@ export class TasksComponent implements OnInit {
     this.tasksService.deleteTask(task);
   }
   createTask() {
-    this.router.navigate(['./create']);
+    this.router.navigate(['./tasks/create']);
   }
 }
