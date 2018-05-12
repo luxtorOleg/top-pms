@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRouting } from './/app-routing';
 import { UserService } from './login/user.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -18,6 +18,7 @@ import { ListItemComponent } from './list-item/list-item.component';
 import { TaskCreateComponent } from './tasks/task-create/task-create.component';
 import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
 import { TaskUpdateComponent } from './tasks/task-update/task-update.component';
+import { TaskListItemComponent } from './task-list-item/task-list-item.component';
 
 
 
@@ -35,12 +36,13 @@ import { TaskUpdateComponent } from './tasks/task-update/task-update.component';
     ListItemComponent,
     TaskCreateComponent,
     TaskDetailComponent,
-    TaskUpdateComponent
+    TaskUpdateComponent,
+    TaskListItemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRouting
   ],
   providers: [
     UserService,
