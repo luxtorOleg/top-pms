@@ -4,6 +4,10 @@
   <p class="lead">All Tasks</p>
   <button class="btn btn-success" (click)="createTask()">Create</button>
   <div class="container">
+    <div class="row">
+      <div class="col-md-2">Name</div>
+      <div class="col-md-2">Type</div>
+    </div>
     <div class="row" *ngFor="let task of tasksService.tasks">
       <app-task-list-item [item]="task"
                      [detailsTaskRouterLink]="getDetailsURL(task)"

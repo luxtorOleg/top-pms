@@ -3,14 +3,18 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <input id="idProj" name="id" [(ngModel)]="task.id"  class="effect-2" type="text" placeholder="id..." ngModel>
+        <input id="idProj" name="id" [(ngModel)]="task.id"  class="effect-2 form-control" type="text" placeholder="id..." ngModel>
         <span class="focus-border"></span>
-        <input id="name" name="name" [(ngModel)]="task.name"  class="effect-2" type="text" placeholder="Name..." ngModel>
-        <span class="focus-border"></span>
-        <input id="type" name="type" [(ngModel)]="task.type" class="effect-2" type="text" placeholder="Type..." ngModel>
-        <span class="focus-border"></span>
-        <button class="enterButton"  type="submit" >Update</button>
       </div>
+      <div class="col">
+        <input id="name" name="name" [(ngModel)]="task.name"  class="effect-2 form-control" type="text" placeholder="Name..." ngModel>
+        <span class="focus-border"></span>
+      </div>
+      <div class="col">
+        <input id="type" name="type" [(ngModel)]="task.type" class="effect-2 form-control" type="text" placeholder="Type..." ngModel>
+        <span class="focus-border"></span>
+      </div>
+        <button class="enterButton btn btn-success"  type="submit" >Update</button>
     </div>
   </div>
 </form>

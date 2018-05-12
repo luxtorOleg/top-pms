@@ -21,7 +21,7 @@ export class TaskCreateComponent implements OnInit {
 
   ngOnInit() {
   }
-  createProject(form: NgForm) {
+  createTask(form: NgForm) {
     this.task = form.value;
     this.tasksService.createTask(this.task);
     this.router.navigate(['./tasks']);
