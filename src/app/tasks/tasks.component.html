@@ -5,10 +5,10 @@
   <button class="btn btn-success" (click)="createTask()">Create</button>
   <div class="container">
     <div class="row" *ngFor="let task of tasksService.tasks">
-      <app-list-item [item]="task"
-                     [detailsRouterLink]="getTaskDetailsURL(task)"
-                     [updateRouterLink]="getTaskUpdateURL(task)"
-                     (delete)="deleteTask($event)"></app-list-item>
+      <app-task-list-item [item]="task"
+                     [detailsTaskRouterLink]="getDetailsURL(task)"
+                     [updateTaskRouterLink]="getUpdateURL(task)"
+                     (delete)="deleteTask($event)"></app-task-list-item>
     </div>
   </div>
 </div>

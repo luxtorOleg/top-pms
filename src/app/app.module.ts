@@ -19,6 +19,7 @@ import { TaskCreateComponent } from './tasks/task-create/task-create.component';
 import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
 import { TaskUpdateComponent } from './tasks/task-update/task-update.component';
 import { TaskListItemComponent } from './task-list-item/task-list-item.component';
+import {TasksService} from './tasks/tasks.service';
 
 
 
@@ -46,7 +47,8 @@ import { TaskListItemComponent } from './task-list-item/task-list-item.component
   ],
   providers: [
     UserService,
-    ProjectsService
+    ProjectsService,
+    TasksService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col">{{item.name}}</div>
+  <div class="col">{{item.owner}}</div>
+  <div class="col">{{item.type}}</div>
+  <button class="btn btn-success " [routerLink]="detailsTaskRouterLink">Details</button>
+  <button class="btn btn-warning" [routerLink]="updateTaskRouterLink">Update</button>
+  <button class="btn btn-danger" (click)="deleteTaskItem()">Delete</button>
+</div>

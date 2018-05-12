@@ -15,13 +15,13 @@ export class TasksComponent implements OnInit {
 
   ngOnInit() {
   }
-  getTaskDetailsURL(task: Task) {
+  getDetailsURL(task: Task) {
     return ['/tasks/' + task.id];
   }
-  getTaskUpdateURL(task: Task) {
-    return ['/tasts/update/' + task.id];
+  getUpdateURL(task: Task) {
+    return ['/tasks/update/' + task.id];
   }
-  deleteProject(task: Task) {
+  deleteTask(task: Task) {
     this.tasksService.deleteTask(task);
   }
   createTask() {
