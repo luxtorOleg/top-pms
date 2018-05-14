@@ -22,6 +22,6 @@ export class ProjectsComponent implements OnInit {
     this.projectsService.deleteProject(project);
   }
   createProject() {
-    this.router.navigate(['./projects/create']);
+    this.router.navigate(['./create/projects']);
   }
 }
