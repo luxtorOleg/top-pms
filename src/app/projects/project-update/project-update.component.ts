@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
@@ -12,7 +12,7 @@ import {ProjectsService} from '../projects.service';
   templateUrl: './project-update.component.html',
   styleUrls: ['./project-update.component.css']
 })
-export class ProjectUpdateComponent implements OnInit {
+export class ProjectUpdateComponent implements OnInit, OnDestroy {
   project: Project;
   paramSubscription: Subscription;
   constructor(public projectsService: ProjectsService, public activatedRouter: ActivatedRoute, public router: Router) { }
@@ -21,9 +21,14 @@ export class ProjectUpdateComponent implements OnInit {
     this.paramSubscription = this.activatedRouter.params.subscribe(params =>
       this.project = this.projectsService.getProjectById(params['id']));
   }
+
   updateProject(form: NgForm) {
     this.project = form.value;
     this.projectsService.updateProject(this.project);
     this.router.navigate(['./projects']);
+  }
+
+  ngOnDestroy() {
+    this.paramSubscription.unsubscribe();
   }
 }
