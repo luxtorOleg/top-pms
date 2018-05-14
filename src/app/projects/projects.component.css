@@ -1,3 +1,7 @@
 .btn {
   margin: 10px;
 }
+.col-md-2 {
+  max-width: 150px !important;
+  padding-left: 0px;
+}

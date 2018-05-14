@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="col">{{item.name}}</div>
-  <div class="col">{{item.owner}}</div>
-  <div class="col">{{item.type}}</div>
+  <div class="col-md-2 form-control">{{item.name}}</div>
+  <div class="col-md-2 form-control">{{item.owner}}</div>
+  <div class="col-md-2 form-control">{{item.type}}</div>
   <button class="btn btn-success " [routerLink]="detailsRouterLink">Details</button>
   <button class="btn btn-warning" [routerLink]="updateRouterLink">Update</button>
   <button class="btn btn-danger" (click)="deleteItem()">Delete</button>
