@@ -14,6 +14,11 @@
         <input id="type" name="type" [(ngModel)]="task.type" class="effect-2 form-control" type="text" placeholder="Type..." ngModel>
         <span class="focus-border"></span>
       </div>
+      <div class="col">
+        <select class="form-control" [(ngModel)]="projectModel" name="projectsSelect">
+          <option *ngFor="let project of projectServie.projects" [ngValue]="project" >{{project.name}}</option>
+        </select>
+      </div>
         <button class="enterButton btn btn-success"  type="submit" >Create</button>
 
     </div>

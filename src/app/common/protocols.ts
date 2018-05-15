@@ -4,7 +4,7 @@ export interface Project {
   type: string;
   owner: string;
   members: Array<Member>;
-  taskId: string;
+  tasks: Array<Task>;
 }
 
 export interface Member {

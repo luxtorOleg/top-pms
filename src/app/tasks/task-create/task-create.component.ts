@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ProjectsService} from '../../projects/projects.service';
-import {Task} from '../../common/protocols';
+import {Project, Task} from '../../common/protocols';
 import {TasksService} from '../tasks.service';
 
 @Component({
@@ -16,14 +16,16 @@ export class TaskCreateComponent implements OnInit {
     name: '',
     type: ''
   };
+  projectModel: Project = null;
 
-  constructor(public tasksService: TasksService, public router: Router) { }
+  constructor(public tasksService: TasksService, public projectServie: ProjectsService, public router: Router) { }
 
   ngOnInit() {
   }
   createTask(form: NgForm) {
     this.task = form.value;
     this.tasksService.createTask(this.task);
+    this.projectServie.updateProjectTask(this.projectModel, this.task);
     this.router.navigate(['./tasks']);
   }
 }

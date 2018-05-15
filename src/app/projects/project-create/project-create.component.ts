@@ -3,7 +3,7 @@ import { ProjectsService} from '../projects.service';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 
-import { Project, Member } from '../../common/protocols';
+import {Project, Member, Task} from '../../common/protocols';
 
 @Component({
   selector: 'app-project-create',
@@ -17,7 +17,7 @@ export class ProjectCreateComponent implements OnInit {
     type: '',
     owner: '',
     members: Array<Member>(),
-    taskId: ''
+    tasks: Array<Task>()
   };
   constructor(public projectService: ProjectsService, public router: Router) {
 

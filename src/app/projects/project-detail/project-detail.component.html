@@ -4,5 +4,8 @@
     <div class="col form-control">{{project.name}}</div>
     <div class="col form-control">{{project.owner}}</div>
     <div class="col form-control">{{project.type}}</div>
+    <select class="col form-control">
+      <option *ngFor="let task of project.tasks">{{task.name}}</option>
+    </select>
   </div>
 </div>
