@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Project, Member, Task } from '../common/protocols';
+import {forEach} from '@angular/router/src/utils/collection';
 
 @Injectable()
 export class ProjectsService {

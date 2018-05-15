@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService} from '../projects.service';
+import {TasksService} from '../../tasks/tasks.service';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 
@@ -19,16 +20,16 @@ export class ProjectCreateComponent implements OnInit {
     members: Array<Member>(),
     tasks: Array<Task>()
   };
-  constructor(public projectService: ProjectsService, public router: Router) {
+  constructor(public projectService: ProjectsService, public taskService: TasksService, public router: Router) {
 
   }
 
   ngOnInit() {
+
   }
 
   createProject(form: NgForm) {
-    this.project = form.value;
-    this.projectService.createProject(this.project);
+    this.projectService.createProject(form.value);
     this.router.navigate(['./projects']);
   }
 }

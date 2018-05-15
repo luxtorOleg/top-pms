@@ -18,7 +18,16 @@
       <input id="owner" name="owner" [(ngModel)]="project.owner" class="effect-2 form-control" type="text" placeholder="Owner..." ngModel>
       <span class="focus-border"></span>
     </div>
+    <div class="col">
+      <select class="form-control" multiple name="tasks" [ngModel]="project.tasks">
+        <option *ngFor="let task of taskService.tasks" [ngValue]="task">
+          {{ task.name }}
+        </option>
+      </select>
+    </div>
+    <div class="col">
       <button class="enterButton btn btn-success"  type="submit" >Create</button>
+    </div>
   </div>
 </div>
 </form>
