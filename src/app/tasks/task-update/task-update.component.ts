@@ -13,6 +13,7 @@ import {TasksService} from '../tasks.service';
   styleUrls: ['./task-update.component.css']
 })
 export class TaskUpdateComponent implements OnInit, OnDestroy {
+  index: number;
   task: Task;
   paramSubscription: Subscription;
   constructor(public tasksService: TasksService, public activatedRouter: ActivatedRoute, public router: Router) { }
@@ -20,11 +21,14 @@ export class TaskUpdateComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.paramSubscription = this.activatedRouter.params.subscribe(params =>
       this.task = this.tasksService.getTaskById(params['id']));
+    this.index = this.tasksService.tasks.indexOf(this.task);
+    this.task = JSON.parse(JSON.stringify(this.task));
+
   }
 
   updateTask(form: NgForm) {
     this.task = form.value;
-    this.tasksService.updateTask(this.task);
+    this.tasksService.updateTask(this.index, this.task);
     this.router.navigate(['./tasks']);
   }
 

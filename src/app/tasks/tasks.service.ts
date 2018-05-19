@@ -33,8 +33,7 @@ export class TasksService {
   createTask(task: Task) {
     this.tasks.push(task);
   }
-  updateTask( task: Task) {
-    const index = this.tasks.indexOf(task);
+  updateTask(index: number, task: Task) {
     this.tasks[index] = task;
   }
 }
