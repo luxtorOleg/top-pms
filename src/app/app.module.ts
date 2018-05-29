@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,6 +22,7 @@ import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
 import { TaskUpdateComponent } from './tasks/task-update/task-update.component';
 import { TaskListItemComponent } from './task-list-item/task-list-item.component';
 import {TasksService} from './tasks/tasks.service';
+import { HttpRequestor } from './common/http-requestor';
 
 
 
@@ -45,12 +47,15 @@ import {TasksService} from './tasks/tasks.service';
     BrowserModule,
     FormsModule,
     AppRouting,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [
     UserService,
     ProjectsService,
-    TasksService
+    TasksService,
+    HttpRequestor
   ],
   bootstrap: [AppComponent]
 })
